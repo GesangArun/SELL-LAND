@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArchiMaxIndonesia | Platform Jual Beli Tanah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">ArchiMaxIndonesia</div>
+        <ul class="nav-links">
+          <li><a href="#listings">Lahan</a></li>
+          <li><a href="#proses">Proses</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#submit">Insert Lahan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn ghost" href="#kontak">Konsultasi Gratis</a>
+          <a class="btn primary slim" href="admin.html">Portal Admin</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Marketplace tanah terpercaya</p>
+          <h1>
+            ArchiMaxIndonesia hadir untuk bantu Anda
+            <span>investasi lahan secara modern</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Jual beli tanah di seluruh Indonesia dengan dukungan tim legal,
+            analis harga, dan dashboard data yang selalu update. Satu platform
+            untuk memantau aset, menambah listing, hingga proses negosiasi.
+          </p>
+          <div class="hero-cta">
+            <a href="#listings" class="btn primary">Jelajahi Lahan</a>
+            <a href="#proses" class="btn ghost">Pelajari Proses</a>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <span class="metric">1.200+</span>
+              <p>Lahan terverifikasi</p>
+            </div>
+            <div>
+              <span class="metric">98%</span>
+              <p>Transaksi sukses</p>
+            </div>
+            <div>
+              <span class="metric">7 Hari</span>
+              <p>Rata-rata deal</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">
+            <p>Highlight Minggu Ini</p>
+            <span>Premium</span>
+          </div>
+          <div class="card-body">
+            <h3>Lahan Industri Karawang</h3>
+            <p class="location">Karawang, Jawa Barat</p>
+            <ul>
+              <li>20.000 m² siap bangun</li>
+              <li>Legalitas SHGB clean & clear</li>
+              <li>Akses 5 menit ke tol Cipali</li>
+            </ul>
+            <div class="price">
+              Rp65 M
+              <small>Rp3.250.000 / m²</small>
+            </div>
+            <button class="btn primary full">Minta Rincian</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section listings" id="listings">
+        <div class="section-header">
+          <p class="eyebrow">Pilihan eksklusif</p>
+          <div>
+            <h2>Lahan unggulan pilihan tim kurator kami</h2>
+            <p>
+              Setiap listing melewati 12 tahap verifikasi, mulai dari legalitas,
+              batas lahan, hingga akses infrastruktur.
+            </p>
+          </div>
+        </div>
+        <div class="listing-grid base-listings">
+          <article class="listing-card">
+            <div class="tags">
+              <span>Komersial</span>
+              <span>Hot Deal</span>
+            </div>
+            <h3>Lahan Boulevard BSD</h3>
+            <p>12.500 m² • Sertifikat HGB</p>
+            <p class="location">BSD City, Tangerang</p>
+            <ul>
+              <li>Zona komersial mixed-use</li>
+              <li>Sudah kavling dan diratakan</li>
+              <li>Radius 1 km dari AEON Mall</li>
+            </ul>
+            <div class="card-footer">
+              <strong>Rp48 M</strong>
+              <button class="btn ghost">Detail</button>
+            </div>
+          </article>
+          <article class="listing-card">
+            <div class="tags">
+              <span>Pertanian</span>
+            </div>
+            <h3>Sawah Subur Buleleng</h3>
+            <p>30.000 m² • Sertifikat SHM</p>
+            <p class="location">Buleleng, Bali</p>
+            <ul>
+              <li>Sistem irigasi teknis</li>
+              <li>Panen 3x setahun</li>
+              <li>Siap alih fungsi agrowisata</li>
+            </ul>
+            <div class="card-footer">
+              <strong>Rp9,8 M</strong>
+              <button class="btn ghost">Detail</button>
+            </div>
+          </article>
+          <article class="listing-card">
+            <div class="tags">
+              <span>Investasi</span>
+            </div>
+            <h3>Lahan Transit Hub Makassar</h3>
+            <p>15.000 m² • Sertifikat HGB</p>
+            <p class="location">Makassar, Sulawesi Selatan</p>
+            <ul>
+              <li>ROI estimasi 17%/tahun</li>
+              <li>Rencana TOD pemerintah</li>
+              <li>Nilai tanah naik 28%/tahun</li>
+            </ul>
+            <div class="card-footer">
+              <strong>Rp27,5 M</strong>
+              <button class="btn ghost">Detail</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+        <div class="listing-grid dynamic-listings" aria-live="polite"></div>
+      </section>
+
+      <section class="section insert" id="submit">
+        <div>
+          <p class="eyebrow">Insert tanah instan</p>
+          <h2>Masukkan listing baru langsung ke katalog utama</h2>
+          <p class="section-desc">
+            Form ini mempermudah agen dan pemilik lahan untuk menambahkan data
+            properti ke ArchiMaxIndonesia. Listing yang dikirim tampil otomatis
+            pada daftar di atas sehingga tim lain dapat segera menindaklanjuti.
+          </p>
+          <ul class="insert-benefits">
+            <li>Validasi otomatis batas harga wajar</li>
+            <li>Preview foto real-time</li>
+            <li>Riwayat tersimpan di browser Anda</li>
+          </ul>
+        </div>
+        <form class="insert-form" aria-label="Form insert lahan baru">
+          <label>
+            Nama Lahan
+            <input
+              type="text"
+              name="name"
+              placeholder="Contoh: Lahan Resort Uluwatu"
+              required
+            />
+          </label>
+          <label>
+            Lokasi
+            <input
+              type="text"
+              name="location"
+              placeholder="Kuta Selatan, Bali"
+              required
+            />
+          </label>
+          <label>
+            Luas (m²)
+            <input
+              type="number"
+              min="100"
+              name="size"
+              placeholder="5000"
+              required
+            />
+          </label>
+          <label>
+            Harga (Rp)
+            <input
+              type="number"
+              min="100000000"
+              step="1000000"
+              name="price"
+              placeholder="25000000000"
+              required
+            />
+          </label>
+          <label>
+            Kategori
+            <select name="category">
+              <option value="Komersial">Komersial</option>
+              <option value="Pertanian">Pertanian</option>
+              <option value="Investasi">Investasi</option>
+              <option value="Industri">Industri</option>
+            </select>
+          </label>
+          <label>
+            URL Foto
+            <input
+              type="url"
+              name="image"
+              placeholder="https://..."
+              required
+            />
+          </label>
+          <label>
+            Highlight utama
+            <textarea
+              name="notes"
+              rows="3"
+              placeholder="Tulis 2-3 keunggulan utama dipisah koma"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn primary full">
+            Tambahkan ke Listing
+          </button>
+          <p class="form-note">
+            Data hanya tersimpan di peramban Anda. Gunakan portal admin untuk
+            unggahan permanen.
+          </p>
+        </form>
+      </section>
+
+      <section class="section spotlight">
+        <div class="spotlight-content">
+          <p class="eyebrow">Kenapa ArchiMaxIndonesia?</p>
+          <h2>Data lengkap untuk keputusan yang percaya diri</h2>
+          <p>
+            Kami menyediakan laporan valuasi harga, analisis potensi, dan
+            simulasi ROI dalam satu dashboard interaktif yang diperbarui real
+            time.
+          </p>
+          <ul class="highlight-list">
+            <li>
+              <strong>Survey & Drone Mapping</strong>
+              Dokumentasi visual 4K dengan overlay batas lahan.
+            </li>
+            <li>
+              <strong>Due Diligence Legal</strong>
+              Pengecekan sertifikat, riwayat sengketa, dan pajak.
+            </li>
+            <li>
+              <strong>Dukungan Pembiayaan</strong>
+              Kemitraan bank dan investor swasta untuk leverage modal.
+            </li>
+          </ul>
+        </div>
+        <div class="spotlight-metrics">
+          <div class="metric-card">
+            <span>4.8/5</span>
+            <p>Rata-rata review investor</p>
+          </div>
+          <div class="metric-card">
+            <span>37 Kota</span>
+            <p>Jangkauan listing aktif</p>
+          </div>
+          <div class="metric-card">
+            <span>Rp2,3 T</span>
+            <p>Nilai transaksi tersalurkan</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="proses">
+        <p class="eyebrow">Langkah simpel</p>
+        <h2>Proses transparan end-to-end</h2>
+        <div class="timeline">
+          <div class="step">
+            <span>01</span>
+            <h3>Konsultasi kebutuhan</h3>
+            <p>Tim analis menyaring lahan sesuai tujuan dan budget Anda.</p>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <h3>Kunjungan & survey</h3>
+            <p>Jadwalkan visit lapangan lengkap dengan drone mapping.</p>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <h3>Negosiasi aman</h3>
+            <p>
+              Draft akta dan PPJB difasilitasi notaris rekanan independen.
+            </p>
+          </div>
+          <div class="step">
+            <span>04</span>
+            <h3>Serah terima clean</h3>
+            <p>Dokumen final disimpan di vault digital TanahLink.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials" id="testimoni">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Cerita sukses</p>
+            <h2>Investor kami bicara</h2>
+          </div>
+          <div class="controls">
+            <button class="control prev" aria-label="Testimoni sebelumnya">
+              ←
+            </button>
+            <button class="control next" aria-label="Testimoni selanjutnya">
+              →
+            </button>
+          </div>
+        </div>
+        <div class="testimonial-track">
+          <article class="testimonial active">
+            <p>
+              “TanahLink bantu kami punya lahan 5 hektar untuk kawasan logistik
+              di Semarang. Semua due diligence selesai dalam 10 hari.”
+            </p>
+            <h3>Kevin Santoso</h3>
+            <small>CEO, Arka Logistik</small>
+          </article>
+          <article class="testimonial">
+            <p>
+              “Valuasi dan simulasi ROI mereka detail banget. Tinggal pilih
+              lahan yang cocok dan langsung kita proses KPR investasi.”
+            </p>
+            <h3>Nadia Rahma</h3>
+            <small>Investor Properti</small>
+          </article>
+          <article class="testimonial">
+            <p>
+              “Pertama kali beli tanah untuk solar farm. Tim TanahLink bantu urus
+              izin dan pencarian partner EPC juga.”
+            </p>
+            <h3>Rifqi Mahendra</h3>
+            <small>Founder, SuryaEnergi</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="kontak">
+        <div class="contact-copy">
+          <p class="eyebrow">Hubungi kami</p>
+          <h2>Siap mulai negosiasi lahan impian Anda?</h2>
+          <p>
+            Lengkapi formulir dan kami akan menghubungi Anda kurang dari 24 jam
+            dengan rekomendasi personal.
+          </p>
+          <div class="contact-meta">
+            <p>Hotline: +62 811-1234-567</p>
+            <p>Email: hello@tanahlink.id</p>
+            <p>Office: Sudirman, Jakarta</p>
+          </div>
+        </div>
+        <form class="contact-form">
+          <label>
+            Nama Lengkap
+            <input type="text" name="name" placeholder="Nama Anda" required />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              placeholder="nama@email.com"
+              required
+            />
+          </label>
+          <label>
+            Lokasi & ukuran tanah
+            <input
+              type="text"
+              name="need"
+              placeholder="Contoh: 2 Ha di Majalengka"
+              required
+            />
+          </label>
+          <label>
+            Pesan
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Ceritakan kebutuhan Anda"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn primary full">
+            Jadwalkan Konsultasi
+          </button>
+          <p class="form-note">
+            Dengan mengirim formulir ini Anda menyetujui kebijakan privasi
+            TanahLink.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 ArchiMaxIndonesia. Semua hak dilindungi.</p>
+      <div class="footer-links">
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Syarat & Ketentuan</a>
+        <a href="#">Pusat Bantuan</a>
+      </div>
+    </footer>
+  </body>
+</html>
+

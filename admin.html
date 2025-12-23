@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Admin | ArchiMaxIndonesia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="admin.js"></script>
+  </head>
+  <body class="admin-body">
+    <header class="hero admin-hero">
+      <nav class="nav">
+        <div class="logo">ArchiMaxIndonesia</div>
+        <div class="nav-cta">
+          <a class="btn ghost" href="index.html">Kembali ke Website</a>
+        </div>
+      </nav>
+      <div class="hero-content admin-header">
+        <div>
+          <p class="eyebrow">Portal internal</p>
+          <h1>Manajemen listing tanah dalam satu dashboard ringan</h1>
+          <p class="hero-subtitle">
+            Upload foto, tentukan harga, dan simpan histori draft sebelum naik
+            tayang. Data disimpan secara lokal sehingga aman saat demo.
+          </p>
+          <div class="hero-cta">
+            <a href="#upload" class="btn primary">Mulai Upload</a>
+            <a href="#queue" class="btn ghost">Lihat Draft</a>
+          </div>
+        </div>
+        <div class="hero-card summary">
+          <div class="card-header">
+            <p>Status Draft</p>
+            <span id="draft-count">0 item</span>
+          </div>
+          <div class="metric-card compact">
+            <span id="avg-price">Rp0</span>
+            <p>Harga rata-rata draft</p>
+          </div>
+          <p class="card-note">
+            Draft yang disimpan belum tampil di website publik sampai diimpor ke
+            sistem utama.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section admin-layout" id="upload">
+        <form class="admin-form" aria-label="Form upload listing admin">
+          <h2>Upload Lahan Baru</h2>
+          <label>
+            Nama proyek
+            <input
+              type="text"
+              name="name"
+              placeholder="Cluster Hijau Sentul"
+              required
+            />
+          </label>
+          <label>
+            Lokasi detail
+            <input type="text" name="location" placeholder="Sentul, Bogor" required />
+          </label>
+          <label>
+            Luas (m²)
+            <input type="number" min="100" name="size" placeholder="7500" required />
+          </label>
+          <label>
+            Harga total (Rp)
+            <input
+              type="number"
+              min="100000000"
+              step="1000000"
+              name="price"
+              placeholder="45000000000"
+              required
+            />
+          </label>
+          <label>
+            Kategori
+            <select name="category">
+              <option value="Komersial">Komersial</option>
+              <option value="Industri">Industri</option>
+              <option value="Pertanian">Pertanian</option>
+              <option value="Resor">Resor</option>
+            </select>
+          </label>
+          <label>
+            Foto Lahan
+            <input type="file" name="photo" accept="image/*" />
+          </label>
+          <label>
+            Highlight
+            <textarea
+              name="notes"
+              rows="4"
+              placeholder="Tulis poin keunggulan dipisah koma"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn primary full">Simpan Draft</button>
+          <p class="form-note">
+            Draft tersimpan di perangkat ini. Ekspor CSV untuk dibagikan ke tim
+            lain.
+          </p>
+        </form>
+        <div class="admin-preview">
+          <h3>Preview Cepat</h3>
+          <div class="preview-card">
+            <div class="preview-image" id="preview-image">Tidak ada foto</div>
+            <div>
+              <p class="preview-location" id="preview-category">Kategori belum dipilih</p>
+              <h4 id="preview-name">Nama proyek</h4>
+              <p id="preview-location">Lokasi akan tampil di sini</p>
+              <p id="preview-size">0 m²</p>
+              <strong id="preview-price">Rp0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section admin-queue" id="queue">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Draft tersimpan</p>
+            <h2>Antrian listing siap publish</h2>
+          </div>
+          <div class="queue-actions">
+            <button class="btn ghost" id="export-csv">Ekspor CSV</button>
+            <button class="btn ghost" id="clear-draft">Bersihkan Draft</button>
+          </div>
+        </div>
+        <div class="queue-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
